@@ -71,15 +71,15 @@ function freelancerArray() {
 
 //Create a function to add a new freelancer to the freelancer array
 
-const newFreelancer = () => {
+const addFreelancer = () => {
   const newFreelancer =
-    newFreelancers[Math.floor(Math.random() * newNames.length)];
+    newFreelancers[Math.floor(Math.random() * newFreelancers.length)];
 
   freelancers.push(newFreelancer);
 
   freelancerArray();
 };
 
-setInterval(newFreelancer, 1000);
+setInterval(addFreelancer, 1000);
 
 init();
