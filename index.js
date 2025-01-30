@@ -35,7 +35,7 @@ function init() {
     const th = document.createElement("th");
     th.textContent = key;
 
-    header_row.appendChild(th);
+    header_row.append(th);
   }
 
   thead.append(header_row);
