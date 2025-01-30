@@ -10,9 +10,11 @@ const freelancers = [
   { name: "Sofia", occupation: "bookkeeper", price: 25 },
 ];
 
-const names = ["Omar", "Hali", "Derik", "Lugene"];
+const newNames = ["Omar", "Hali", "Derik", "Lugene"];
 
-const occupations = ["teacher", "chef", "plumber", "electrician"];
+const newOccupations = ["teacher", "chef", "plumber", "electrician"];
+
+const newPrices = [50, 35, 25, 45];
 
 // create an init function
 
@@ -38,30 +40,45 @@ function init() {
   table.append(tbody);
   root.append(table);
 
-  freelancerArray(); 
+  freelancerArray();
 }
 
 function freelancerArray() {
-    const freelancerTable = document.querySelector('tbody');
+  const freelancerTable = document.querySelector("tbody");
 
-    const freelancerElements = freelancers.map(freelancer => {
-        const row = document.createElement('tr');
+  const freelancerElements = freelancers.map((freelancer) => {
+    const row = document.createElement("tr");
 
-        const name = document.createElement('td');
-        name.textContent = freelancer.name;
+    const name = document.createElement("td");
+    name.textContent = freelancer.name;
 
-        const occupation = document.createElement('td');
-        occupation.textContent = freelancer.occupation;
+    const occupation = document.createElement("td");
+    occupation.textContent = freelancer.occupation;
 
-        const price = document.createElement('td');
-        price.textContent = freelancer.price;
+    const price = document.createElement("td");
+    price.textContent = freelancer.price;
 
-        row.append(name, occupation, price);
+    row.append(name, occupation, price);
 
-        return row;
-    });
+    return row;
+  });
 
-    freelancerTable.replaceChildren(...freelancerElements);
+  freelancerTable.replaceChildren(...freelancerElements);
 }
+
+//Create a function to add a new freelancer to the freelancer array
+
+const newFreelancer = () => {
+  const newName = newNames[Math.floor(Math.random() * newNames.length)];
+  const newOccupations =
+    newNames[Math.floor(Math.random() * newOccupations.length)];
+  const newPrices = newNames[Math.floor(Math.random() * newPrices.length)];
+
+  freelancers.push(newName, newOccupations, newPrices);
+
+  freelancerArray();
+};
+
+setInterval(newFreelancer, 1000);
 
 init();
