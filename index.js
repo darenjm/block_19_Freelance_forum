@@ -9,6 +9,11 @@ const freelancers = [
   { name: "Olivia", occupation: "accountant", price: 35 },
   { name: "Sofia", occupation: "bookkeeper", price: 25 },
 ];
+const newFreelancers = [
+  { name: "John", occupation: "General", price: 50 },
+  { name: "Liz", occupation: "Private", price: 35 },
+  { name: "Max", occupation: "Astronomer", price: 25 },
+];
 
 const newNames = ["Omar", "Hali", "Derik", "Lugene"];
 
@@ -69,12 +74,10 @@ function freelancerArray() {
 //Create a function to add a new freelancer to the freelancer array
 
 const newFreelancer = () => {
-  const newName = newNames[Math.floor(Math.random() * newNames.length)];
-  const newOccupations =
-    newNames[Math.floor(Math.random() * newOccupations.length)];
-  const newPrices = newNames[Math.floor(Math.random() * newPrices.length)];
+  const newFreelancer =
+    newFreelancers[Math.floor(Math.random() * newNames.length)];
 
-  freelancers.push(newName, newOccupations, newPrices);
+  freelancers.push(newFreelancer);
 
   freelancerArray();
 };
