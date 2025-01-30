@@ -24,9 +24,7 @@ const newPrices = [50, 35, 25, 45];
 // create an init function
 
 function init() {
-  console.log("Hello world");
   const root = document.querySelector(".freelancer_container");
-  console.log(root);
 
   const table = document.createElement("table");
   const thead = document.createElement("thead");
