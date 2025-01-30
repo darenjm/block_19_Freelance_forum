@@ -21,6 +21,24 @@ function init() {
   const root = document.querySelector(".freelancer_container");
   console.log(root);
 
+  const table = document.createElement("table");
+  const thead = document.createElement("thead");
+  const tbody = document.createElement("tbody");
+  const header_row = document.createElement("tr");
+
+  for (let key in freelancers[0]) {
+    const th = document.createElement("th");
+    th.textContent = key;
+
+    header_row.appendChild(th);
+  }
+
+  thead.append(header_row);
+  table.append(thead);
+  table.append(tbody);
+
+  root.append(table);
+
 }
 
 init();
