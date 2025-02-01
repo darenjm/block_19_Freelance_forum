@@ -1,8 +1,5 @@
 //starting freelancer array with at least 2 objects [{name: 'Sam', occupation: 'Programmer', price: 50}]
-
-//array of names
-
-//array of occupations
+//array of names  //array of occupations
 
 const freelancers = [
   { name: "Oliver", occupation: "scientist", price: 50 },
