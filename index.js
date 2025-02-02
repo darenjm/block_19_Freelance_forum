@@ -85,13 +85,14 @@ const addFreelancer = () => {
 
 setInterval(addFreelancer, 1000);
 
+
 const getTotalPrice = () => {
   return freelancers.reduce((total, freelancer) => total + freelancer.price, 0);
 };
-console.log(getTotalPrice());
 
 const avgPrice = document.querySelector(".average_price");
 
-avgPrice.textContent = getTotalPrice()
+avgPrice.textContent = Math.round(getTotalPrice() / freelancers.length);
+
 
 init();
