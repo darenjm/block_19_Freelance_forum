@@ -6,11 +6,6 @@ const freelancers = [
   { name: "Olivia", occupation: "accountant", price: 35 },
   { name: "Sofia", occupation: "bookkeeper", price: 25 },
 ];
-const newFreelancers = [
-  { name: "John", occupation: "General", price: 50 },
-  { name: "Liz", occupation: "Private", price: 35 },
-  { name: "Max", occupation: "Astronomer", price: 25 },
-];
 
 const newName = ["Omar", "Hali", "Derik", "Lugene"];
 
