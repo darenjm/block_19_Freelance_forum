@@ -67,9 +67,11 @@ function freelancerArray() {
 }
 
 const addFreelancer = () => {
+
   const newFreelancer = newName[Math.floor(Math.random() * newName.length)];
 
   const occupation = newOccupation[Math.floor(Math.random() * newOccupation.length)];
+  
   const price = newPrice[Math.floor(Math.random() * newPrice.length)];
 
   freelancers.push({
