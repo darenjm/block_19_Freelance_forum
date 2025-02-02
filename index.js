@@ -12,11 +12,11 @@ const newFreelancers = [
   { name: "Max", occupation: "Astronomer", price: 25 },
 ];
 
-const newNames = ["Omar", "Hali", "Derik", "Lugene"];
+const newName = ["Omar", "Hali", "Derik", "Lugene"];
 
-const newOccupations = ["teacher", "chef", "plumber", "electrician"];
+const newOccupation = ["teacher", "chef", "plumber", "electrician"];
 
-const newPrices = [50, 35, 25, 45];
+const newPrice = [50, 35, 25, 45];
 
 // create an init function
 
@@ -68,11 +68,25 @@ function freelancerArray() {
 
 //Create a function to add a new freelancer to the freelancer array
 
-const addFreelancer = () => {
-  const newFreelancer =
-    newFreelancers[Math.floor(Math.random() * newFreelancers.length)];
+// const addFreelancer = () => {
+//   const newFreelancer =
+//     newFreelancers[Math.floor(Math.random() * newFreelancers.length)];
 
-  freelancers.push(newFreelancer);
+//   freelancers.push(newFreelancer);
+
+//   freelancerArray();
+// };
+const addFreelancer = () => {
+  const newFreelancer = newName[Math.floor(Math.random() * newName.length)];
+
+  const occupation = newOccupation[Math.floor(Math.random() * newOccupation.length)];
+  const price = newPrice[Math.floor(Math.random() * newPrice.length)];
+
+  freelancers.push({
+    name: newFreelancer,
+    occupation: occupation,
+    price: price,
+  });
 
   freelancerArray();
 };
@@ -80,3 +94,4 @@ const addFreelancer = () => {
 setInterval(addFreelancer, 1000);
 
 init();
+
