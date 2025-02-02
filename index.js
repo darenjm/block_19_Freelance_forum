@@ -71,7 +71,7 @@ const addFreelancer = () => {
   const newFreelancer = newName[Math.floor(Math.random() * newName.length)];
 
   const occupation = newOccupation[Math.floor(Math.random() * newOccupation.length)];
-  
+
   const price = newPrice[Math.floor(Math.random() * newPrice.length)];
 
   freelancers.push({
@@ -84,5 +84,14 @@ const addFreelancer = () => {
 };
 
 setInterval(addFreelancer, 1000);
+
+const getTotalPrice = () => {
+  return freelancers.reduce((total, freelancer) => total + freelancer.price, 0);
+};
+console.log(getTotalPrice());
+
+const avgPrice = document.querySelector(".average_price");
+
+avgPrice.textContent = getTotalPrice()
 
 init();
