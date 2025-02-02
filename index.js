@@ -66,16 +66,6 @@ function freelancerArray() {
   freelancerTable.replaceChildren(...freelancerElements);
 }
 
-//Create a function to add a new freelancer to the freelancer array
-
-// const addFreelancer = () => {
-//   const newFreelancer =
-//     newFreelancers[Math.floor(Math.random() * newFreelancers.length)];
-
-//   freelancers.push(newFreelancer);
-
-//   freelancerArray();
-// };
 const addFreelancer = () => {
   const newFreelancer = newName[Math.floor(Math.random() * newName.length)];
 
@@ -94,4 +84,3 @@ const addFreelancer = () => {
 setInterval(addFreelancer, 1000);
 
 init();
-
